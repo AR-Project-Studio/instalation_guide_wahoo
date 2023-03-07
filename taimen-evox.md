@@ -72,4 +72,5 @@ Starting with Android 12, you must re-partition the device for Evolution-X to be
 Note: If you want to revert to the stock partition table, kindly download and flash the this [Stock Partiton - Pixel 2 XL](https://gitlab.pixelexperience.org/android/vendor-blobs/wiki_blobs_wahoo/-/raw/main/deproduction-pixel2xl.zip)
 
 ### Credit:
+- Evolution-X
 - Pixelboot for repart file
