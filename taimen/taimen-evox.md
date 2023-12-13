@@ -31,7 +31,7 @@ fastboot flashing unlock
 7. Since the device resets completely, you will need to re-enable USB debugging to continue.
 
 ### Booting a custom recovery using fastboot
-1. Download the [TWRP Recovery](https://github.com/9efce048-907f-4f29-b4a2-9ff6b936774d)
+1. Download the [TWRP Recovery](https://github.com/Google-Pixel2-2XL/instalation_guide_wahoo/raw/evolution-x/taimen/twrp/twrp-3.7.0_9-0-taimen.img)
 Simply download the latest recovery file.
 2. Connect your device to your PC via USB if it isn’t already.
 3. If your device isn’t already in fastboot mode, on the computer, open a command prompt (on Windows) or terminal (on Linux or macOS) window, and type:
@@ -59,7 +59,7 @@ fastboot flash boot <recovery_filename>.img
 ### Pre-install instructions
 Starting with Android 14, you must re-partition again your device for Android 14 to be installed. If you already repart, well you just need to flash the new repart file, no need to back to the stock partition
 
-1. Download [productpartition-taimen-a14.zip](https://github.com/cf9f826f-793d-4370-bcdf-14daa5ddbb54)
+1. Download [productpartition-taimen-a14.zip](https://github.com/Google-Pixel2-2XL/instalation_guide_wahoo/raw/evolution-x/taimen/repart/productpartition-taimen-a14.zip)
 2. Sideload the .zip package:
     - On the TWRP Recovery, select ”Advance“, “Adb sideload”, then swipe to begin sideload.
     - On the computer, type adb sideload and drag to terminal the productpartition-taimen-a14.zip file then enter
@@ -67,4 +67,4 @@ Starting with Android 14, you must re-partition again your device for Android 14
 4. Now tap Wipe, then Format data/factory reset and continue with the formatting process. Next reboot to recovery again
 5. The last, sideload the rom like sideloading the productpartition-taimen-a14.zip on step number 2
 
-Note: If you want to revert to the stock partition table, kindly download and flash the this [Stock Partiton - Pixel 2 XL](https://github.com/0a773273-6cc3-4f48-91b0-898642cffd51)
+Note: If you want to revert to the stock partition table, kindly download and flash the this [Stock Partiton - Pixel 2 XL](https://github.com/Google-Pixel2-2XL/instalation_guide_wahoo/raw/evolution-x/taimen/repart/stockpartition-pixel2xl.zip)
