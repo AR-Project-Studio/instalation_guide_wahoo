@@ -31,7 +31,7 @@ fastboot flashing unlock
 7. Since the device resets completely, you will need to re-enable USB debugging to continue
 
 ### Booting a custom recovery using fastboot
-1. Download the [TWRP Recovery](blob:https://github.com/61dd1b0e-c154-410e-9989-aef7717270c9)
+1. Download the [TWRP Recovery](https://github.com/61dd1b0e-c154-410e-9989-aef7717270c9)
 Simply download the latest recovery file
 2. Connect your device to your PC via USB if it isn’t already
 3. If your device isn’t already in fastboot mode, on the computer, open a command prompt (on Windows) or terminal (on Linux or macOS) window, and type:
@@ -49,8 +49,8 @@ fastboot devices
    - on Linux or macOS: If you see no permissions fastboot try running fastboot as root. When the output is empty, check your USB cable (preferably use a USB Type-A 2.0 one or a USB hub) and port!
 
 5. Flash the TRWP Recovery on your device by typing
-```bash
-fastboot flash boot recovery_filename
+```
+fastboot flash boot <recovery_filename>.img
 ```
    "replace <recovery_filename> with the actual filename!"
 
@@ -59,7 +59,7 @@ fastboot flash boot recovery_filename
 ### Pre-install instructions
 Starting with Android 14, you must re-partition again your device for Android 14 to be installed. If you already repart, well you just need to flash the new repart file, no need to back to the stock partition
 
-1. Download [productpartition-walleye-a14.zip](blob:https://github.com/7eca81be-381a-4da2-8d7f-c8983ecb65cb)
+1. Download [productpartition-walleye-a14.zip](https://github.com/7eca81be-381a-4da2-8d7f-c8983ecb65cb)
 2. Sideload the .zip package:
    - On the TWRP Recovery, select ”Advance“, “Adb sideload”, then swipe to begin sideload.
    - On the computer, type adb sideload and drag to terminal the productpartition-walleye-a14.zip file then enter
