@@ -1,6 +1,4 @@
-![Installation Guide for Evolution-X](https://i.imgur.com/o2G52Ve.png)
-
-## Installation Guide for Evolution-X on Taimen
+## Installation Guide for Android 14 on Taimen
 
 ### Basic requirements
 1. Read through the instructions at least once before actually following them, so as to avoid any problems due to any missed steps!
@@ -33,7 +31,7 @@ fastboot flashing unlock
 7. Since the device resets completely, you will need to re-enable USB debugging to continue.
 
 ### Booting a custom recovery using fastboot
-1. Download the [TWRP Recovery](https://dl.twrp.me/taimen/twrp-3.7.0_9-0-taimen.img)
+1. Download the [TWRP Recovery](blob:https://github.com/9efce048-907f-4f29-b4a2-9ff6b936774d)
 Simply download the latest recovery file.
 2. Connect your device to your PC via USB if it isn’t already.
 3. If your device isn’t already in fastboot mode, on the computer, open a command prompt (on Windows) or terminal (on Linux or macOS) window, and type:
@@ -59,18 +57,14 @@ fastboot flash boot <recovery_filename>.img
 6. Now reboot into recovery to verify the installation
 
 ### Pre-install instructions
-Starting with Android 12, you must re-partition the device for Evolution-X to be installed.
+Starting with Android 14, you must re-partition again your device for Android 14 to be installed. If you already repart, well you just need to flash the new repart file, no need to back to the stock partition
 
-1. Download [Product Partition 3GB - Pixel 2 XL](https://gitlab.pixelexperience.org/android/vendor-blobs/wiki_blobs_wahoo/-/raw/main/productpartition-pixel2xl-extended.zip)
+1. Download [productpartition-taimen-a14.zip](blob:https://github.com/cf9f826f-793d-4370-bcdf-14daa5ddbb54)
 2. Sideload the .zip package:
     - On the TWRP Recovery, select ”Advance“, “Adb sideload”, then swipe to begin sideload.
-    - On the computer, type adb sideload and drag to terminal the Product Partition 3GB file then enter
+    - On the computer, type adb sideload and drag to terminal the productpartition-taimen-a14.zip file then enter
 3. Return to the main menu
 4. Now tap Wipe, then Format data/factory reset and continue with the formatting process. Next reboot to recovery again
-5. The last, sideload the rom like sideloading the Product Partition 3GB on step number 2
+5. The last, sideload the rom like sideloading the productpartition-taimen-a14.zip on step number 2
 
-Note: If you want to revert to the stock partition table, kindly download and flash the this [Stock Partiton - Pixel 2 XL](https://gitlab.pixelexperience.org/android/vendor-blobs/wiki_blobs_wahoo/-/raw/main/deproduction-pixel2xl.zip)
-
-### Credit:
-- Evolution-X
-- Pixelboot for repart file
+Note: If you want to revert to the stock partition table, kindly download and flash the this [Stock Partiton - Pixel 2 XL](blob:https://github.com/0a773273-6cc3-4f48-91b0-898642cffd51)
