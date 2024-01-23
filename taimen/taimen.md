@@ -1,4 +1,6 @@
-## Installation Guide for Android 14 on Taimen
+![Installation Guide For Android 14](https://github.com/asriadirahim/mom_montly_meeting/blob/main/AR-Project%20Banner.png)
+
+## Installation Guide for Android 14 on Google Pixel 2XL (Taimen)
 
 ### Basic requirements
 1. Read through the instructions at least once before actually following them, so as to avoid any problems due to any missed steps!
@@ -13,16 +15,14 @@
 ```
 adb reboot bootloader
 ```
-   "You can also boot into fastboot mode via a key combination with the device powered off, hold Volume Down + Power"
-
+   - You can also boot into fastboot mode via a key combination with the device powered off, hold Volume Down + Power
 4. Once the device is in fastboot mode, verify your PC finds it by typing:
 ```
 fastboot devices
 ```
-   If you don’t get any output or an error:
+   If you get any output or an error:
    - on Windows: make sure the device appears in the device manager without a triangle. Try other drivers until the command above works!
    - on Linux or macOS: If you see no permissions fastboot try running fastboot as root. When the output is empty, check your USB cable and port!
-
 5. Now type the following command to unlock the bootloader:
 ```
 fastboot flashing unlock
@@ -30,41 +30,73 @@ fastboot flashing unlock
 6. If the device doesn’t automatically reboot, reboot it. It should now be unlocked.
 7. Since the device resets completely, you will need to re-enable USB debugging to continue.
 
-### Booting a custom recovery using fastboot
-1. Download the [TWRP Recovery](https://github.com/Google-Pixel2-2XL/instalation_guide_wahoo/raw/evolution-x/taimen/twrp/twrp-3.7.0_9-0-taimen.img)
-Simply download the latest recovery file.
-2. Connect your device to your PC via USB if it isn’t already.
-3. If your device isn’t already in fastboot mode, on the computer, open a command prompt (on Windows) or terminal (on Linux or macOS) window, and type:
+### Repartition
+Specially for build provided by AR Project Studio, you must repartition again your device. If you have repartitioned with PixelExperience partition, well you just need to flash the new repart file, no need back to the stock partition again. But if you want to make all clean, you can do back to the stock patition firts then repart again.
+
+1. Download [TWRP Recovery](https://github.com/Google-Pixel2-2XL/instalation_guide_wahoo/raw/evolution-x/taimen/twrp/twrp-3.7.0_9-0-taimen.img)
+2. Download [Partition A14 Pixel 2XL](https://github.com/Google-Pixel2-2XL/instalation_guide_wahoo/raw/evolution-x/taimen/repart/partition14-taimen.zip)
+3. Connect your device to your PC via USB if it isn’t already.
+4. If your device isn’t already in fastboot mode, on the computer, open a command prompt (on Windows) or terminal (on Linux or macOS) window, and type:
 ```
 adb reboot bootloader
 ```
-   "You can also boot into fastboot mode via a key combination Wwith the device powered off, hold Volume Down + Power"
-
-4. Once the device is in fastboot mode, verify your PC finds it by typing: 
+5. Once the device is in fastboot mode, verify your PC finds it by typing: 
 ```
 fastboot devices
 ```
-   If you don’t get any output or an error:
-   - on Windows: make sure the device appears in the device manager without a triangle. Try other drivers until the command above works!
-   - on Linux or macOS: If you see no permissions fastboot try running fastboot as root. When the output is empty, check your USB cable (preferably use a USB Type-A 2.0 one or a USB hub) and port!
-
-5. Flash the TRWP Recovery on your device by typing
+6. Flash the TRWP Recovery on your device by typing:
 ```
 fastboot flash boot <recovery_filename>.img
 ```
-   "replace <recovery_filename> with the actual filename!"
+   - Replace <recovery_filename> with the actual filename or just drag & drop the file to the terminal
+7. Now reboot into recovery
+8. Sideload the new partition file by typing:
+```
+adb sideload <partition_filename>.zip
+```
+   - Replace <partition_filename> with the actual filename or just drag & drop the file to the terminal
+   - On the TWRP Recovery, select "Advance", "Adb sideload", then swipe to begin sideload
+9. After flash complete, on TWRP select return to the main menu
+10. Now tap Wipe, then select Format data/factory reset and continue with the formatting process.
 
-6. Now reboot into recovery to verify the installation
+## Flashing
 
-### Pre-install instructions
-Starting with Android 14, you must re-partition again your device for Android 14 to be installed. If you already repart, well you just need to flash the new repart file, no need to back to the stock partition
+### Clean flash
+1. Reboot to bootloader by typing:
+```
+adb reboot bootloader
+```
+2. Wipe data by typing:
+```
+fastboot -w
+```
+3. Flash TWRP or boot.img provided
+4. Reboot to recovery
+  - On the TWRP Recovery, select "Advance", "Adb sideload", then swipe to begin sideload
+  - On the Elixir Recovery, select "Apply update"
+5. Sideload the ROM by typing:
+```
+adb sideload <ROM_filename>.zip
+```
+  - Replace <ROM_filename> with the actual filename or just drag the file to the terminal
+6. Reboot system
 
-1. Download [productpartition-taimen-a14.zip](https://github.com/Google-Pixel2-2XL/instalation_guide_wahoo/raw/evolution-x/taimen/repart/productpartition-taimen-a14.zip)
-2. Sideload the .zip package:
-    - On the TWRP Recovery, select ”Advance“, “Adb sideload”, then swipe to begin sideload.
-    - On the computer, type adb sideload and drag to terminal the productpartition-taimen-a14.zip file then enter
-3. Return to the main menu
-4. Now tap Wipe, then Format data/factory reset and continue with the formatting process. Next reboot to recovery again
-5. The last, sideload the rom like sideloading the productpartition-taimen-a14.zip on step number 2
+### Dirty flash
+1. Reboot to recovery by typing:
+```
+adb reboot recovery
+```
+  - On the Elixir Recovery, select "Apply update"
+2. Sideload the ROM by typing
+```
+adb sideload <ROM_filename>.zip
+```
+  - Replace <ROM_filename> with the actual filename or just drag the file to the terminal
+3. Reboot system
 
-Note: If you want to revert to the stock partition table, kindly download and flash the this [Stock Partiton - Pixel 2 XL](https://github.com/Google-Pixel2-2XL/instalation_guide_wahoo/raw/evolution-x/taimen/repart/stockpartition-pixel2xl.zip)
+## Note:
+If you want to back to the stock partition table, kindly download and flash the this [Stock Partiton - Pixel 2 XL](https://github.com/Google-Pixel2-2XL/instalation_guide_wahoo/raw/evolution-x/taimen/repart/stockpartition-pixel2xl.zip)
+
+## Credit:
+   - PixelBoot
+   - Lanchon's Flashize
