@@ -73,7 +73,7 @@ fastboot -w
 3. Flash TWRP or boot.img provided
 4. Reboot to recovery
   - On the TWRP Recovery, select "Advance", "Adb sideload", then swipe to begin sideload
-  - On the Elixir Recovery, select "Apply update"
+  - On the recovery, select "Apply update"
 5. Sideload the ROM by typing:
 ```
 adb sideload <ROM_filename>.zip
@@ -86,7 +86,7 @@ adb sideload <ROM_filename>.zip
 ```
 adb reboot recovery
 ```
-  - On the Elixir Recovery, select "Apply update"
+  - On the recovery, select "Apply update"
 2. Sideload the ROM by typing
 ```
 adb sideload <ROM_filename>.zip
