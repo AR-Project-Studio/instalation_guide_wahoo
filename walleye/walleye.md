@@ -1,12 +1,12 @@
 ![Installation Guide For Android 14](https://github.com/Google-Pixel2-2XL/instalation_guide_wahoo/blob/main/AR-Project%20Banner.png)
 
 ## Installation Guide for Android 14 on Google Pixel 2 (Walleye)
-
 ### Basic requirements
-1. Read through the instructions at least once before actually following them, so as to avoid any problems due to any missed steps!
-2. Make sure your computer has adb and fastboot
-3. Enable USB debugging on your device
-4. Boot your device with the stock OS at least once and check every functionality. Make sure that you can send and receive SMS and place and receive calls (also via WiFi and LTE, if available)
+> [!Important]
+> * Read through the instructions at least once before actually following them, so as to avoid any problems due to any missed steps!
+> * Make sure your computer has adb and fastboot
+> * Enable USB debugging on your device
+> * Boot your device with the stock OS at least once and check every functionality. Make sure that you can send and receive SMS and place and receive calls (also via WiFi and LTE, if available)
 
 ### Unlocking the bootloader
 1. Enable OEM unlock in the Developer options under device Settings, if present
@@ -15,14 +15,16 @@
 ```
 adb reboot bootloader
 ```
-   - You can also boot into fastboot mode via a key combination with the device powered off, hold Volume Down + Power
+> [!Tip]
+> You can also boot into fastboot mode by using a key combination while the device is powered off: hold the Volume Down + Power buttons.
 4. Once the device is in fastboot mode, verify your PC finds it by typing:
 ```
 fastboot devices
 ```
-   If you get any output or an error:
-   - on Windows: make sure the device appears in the device manager without a triangle. Try other drivers until the command above works!
-   - on Linux or macOS: If you see no permissions fastboot try running fastboot as root. When the output is empty, check your USB cable and port!
+> [!Tip]
+> If you get any output or an error:
+> * on Windows: make sure the device appears in the device manager without a triangle. Try other drivers until the command above works!
+> * on Linux or macOS: If you see no permissions fastboot try running fastboot as root. When the output is empty, check your USB cable and port!
 5. Now type the following command to unlock the bootloader:
 ```
 fastboot flashing unlock
@@ -31,7 +33,8 @@ fastboot flashing unlock
 7. Since the device resets completely, you will need to re-enable USB debugging to continue.
 
 ### Repartition
-Specially for build provided by AR Project Studio, you must repartition again your device. If you have repartitioned with PixelExperience partition, well you just need to flash the new repart file, no need back to the stock partition again. But if you want to make all clean, you can do back to the stock patition firts then repart again.
+> [!Warning]
+> Specifically for the build provided by AR Project Studio, you must repartition your device again. If you have already repartitioned using the PixelExperience partition, you only need to flash the new repart file, there’s no need to revert to the stock partition. However, if you want a completely clean setup, you can revert to the stock partition first and then repartition again.
 
 1. Download [TWRP Recovery](https://github.com/Google-Pixel2-2XL/instalation_guide_wahoo/raw/evolution-x/walleye/twrp/twrp-3.3.0-0-walleye.img)
 2. Download [Partition A14 Pixel 2](https://github.com/Google-Pixel2-2XL/instalation_guide_wahoo/raw/evolution-x/walleye/repart/partition14-walleye.zip)
@@ -48,21 +51,24 @@ fastboot devices
 ```
 fastboot flash boot <recovery_filename>.img
 ```
-   - Replace <recovery_filename> with the actual filename or just drag & drop the file to the terminal
+> [!Note]
+> Replace <recovery_filename> with the actual filename, or simply drag and drop the file into the terminal.
 7. Now reboot into recovery
 8. Sideload the new partition file by typing:
 ```
 adb sideload <partition_filename>.zip
 ```
-   - Replace <partition_filename> with the actual filename or just drag & drop the file to the terminal
-   - On the TWRP Recovery, select "Advance", "Adb sideload", then swipe to begin sideload
-9. After flash complete, on TWRP select return to the main menu
-10. Now tap Wipe, then select Format data/factory reset and continue with the formatting process.
+> [!Note]
+> Replace <partition_filename> with the actual filename or just drag & drop the file to the terminal
+9. In TWRP Recovery, select "Advanced," then "ADB Sideload," and swipe to begin the sideload process.
+> [!Important]
+> * After the flashing is complete, in TWRP, select "Return to the main menu."
+> * Select "Wipe," then select "Format Data/Factory Reset" and proceed with the formatting
 
 ## Flashing
 
 ### Clean flash
-1. Reboot to bootloader by typing:
+1. Reboot into bootloader by typing:
 ```
 adb reboot bootloader
 ```
@@ -70,32 +76,33 @@ adb reboot bootloader
 ```
 fastboot -w
 ```
-3. Flash TWRP or boot.img provided
-4. Reboot to recovery
-  - On the TWRP Recovery, select "Advance", "Adb sideload", then swipe to begin sideload
-  - On the recovery, select "Apply update"
+3. Flash the AOSP Recovery (boot.img)
+4. Reboot into recovery
+5. In recovery, select "Apply Update"
 5. Sideload the ROM by typing:
 ```
 adb sideload <ROM_filename>.zip
 ```
-  - Replace <ROM_filename> with the actual filename or just drag the file to the terminal
+> [!Note]
+> Replace <recovery_filename> with the actual filename, or simply drag and drop the file into the terminal.
 6. Reboot system
 
 ### Dirty flash
-1. Reboot to recovery by typing:
+1. Reboot into recovery by typing:
 ```
 adb reboot recovery
 ```
-  - On the recovery, select "Apply update"
+2. In recovery select "Apply Update"
 2. Sideload the ROM by typing
 ```
 adb sideload <ROM_filename>.zip
 ```
-  - Replace <ROM_filename> with the actual filename or just drag the file to the terminal
+> [!Note]
+> Replace <ROM_filename> with the actual filename, or simply drag the file into the terminal.
 3. Reboot system
 
-## Note: 
-If you want to back to the stock partition table, kindly flash the official Google factory image: [Stock Partiton - Pixel 2](https://developers.google.com/android/images#walleye)
+> [!Important]
+> If you want to back to the stock partition table, kindly flash the official Google factory image: [Stock Partiton - Pixel 2](https://developers.google.com/android/images#walleye)
 
 ## Credit:
    - PixelBoot
