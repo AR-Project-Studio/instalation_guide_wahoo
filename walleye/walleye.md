@@ -38,8 +38,8 @@ fastboot flashing unlock
 > [!Warning]
 > Specifically for the build provided by AR Project Studio, you must repartition your device again. If you have already repartitioned using the PixelExperience partition, you only need to flash the new repart file, there’s no need to revert to the stock partition. However, if you want a completely clean setup, you can revert to the stock partition first and then repartition again.
 
-1. Download [TWRP Recovery](https://github.com/Google-Pixel2-2XL/instalation_guide_wahoo/raw/evolution-x/walleye/twrp/twrp-3.3.0-0-walleye.img)
-2. Download [Partition A14 Pixel 2](https://github.com/Google-Pixel2-2XL/instalation_guide_wahoo/raw/evolution-x/walleye/repart/partition14-walleye.zip)
+1. Download [TWRP Recovery](https://github.com/Google-Pixel2-2XL/instalation_guide_wahoo/raw/main/walleye/twrp/twrp-3.3.0-0-walleye.img)
+2. Download [Partition A14 Pixel 2](https://github.com/Google-Pixel2-2XL/instalation_guide_wahoo/raw/main/walleye/repart/partition14-walleye.zip)
 3. Connect your device to your PC via USB if it isn’t already.
 4. If your device isn’t already in fastboot mode, on the computer, open a command prompt (on Windows) or terminal (on Linux or macOS) window, and type:
 ```
