@@ -1,6 +1,6 @@
 ![Installation Guide For Android 14](https://github.com/Google-Pixel2-2XL/instalation_guide_wahoo/blob/main/AR-Project%20Banner.png)
 
-## Installation Guide for Android 14 on Google Pixel 2 (Walleye)
+## Installation Guide for Android 14 on Google Pixel 2 (walleye)
 
 ### Basic requirements
 > [!Important]
