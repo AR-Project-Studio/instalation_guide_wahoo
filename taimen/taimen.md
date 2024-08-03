@@ -1,4 +1,4 @@
-![Installation Guide For Android 14](https://github.com/Google-Pixel2-2XL/instalation_guide_wahoo/blob/main/AR-Project%20Banner.png)
+![Installation Guide For Android 14](https://github.com/AR-Project-Studio/instalation_guide_wahoo/blob/main/AR-Project%20Banner.png)
 
 ## Installation Guide for Android 14 on Google Pixel 2XL (taimen)
 
@@ -38,8 +38,8 @@ fastboot flashing unlock
 > [!Warning]
 > Specifically for the build provided by AR Project Studio, you must repartition your device again. If you have already repartitioned using the PixelExperience partition, you only need to flash the new repart file, there’s no need to revert to the stock partition. However, if you want a completely clean setup, you can revert to the stock partition first and then repartition again.
 
-1. Download [TWRP Recovery](https://github.com/Google-Pixel2-2XL/instalation_guide_wahoo/raw/main/taimen/twrp/twrp-3.7.0_9-0-taimen.img)
-2. Download [Partition A14 Pixel 2XL](https://github.com/Google-Pixel2-2XL/instalation_guide_wahoo/raw/main/taimen/repart/partition14-taimen.zip)
+1. Download [TWRP Recovery](https://github.com/AR-Project-Studio/instalation_guide_wahoo/raw/main/taimen/twrp/twrp-3.7.0_9-0-taimen.img)
+2. Download [Partition A14 Pixel 2XL](https://github.com/AR-Project-Studio/instalation_guide_wahoo/raw/main/taimen/repart/partition14-taimen.zip)
 3. Connect your device to your PC via USB if it isn’t already.
 4. If your device isn’t already in fastboot mode, on the computer, open a command prompt (on Windows) or terminal (on Linux or macOS) window, and type:
 ```
@@ -104,7 +104,7 @@ adb sideload <ROM_filename.zip>
 3. Reboot system
 
 > [!Important]
-> f you want to back to the stock partition table, kindly download and flash the this [Stock Partiton - Pixel 2 XL](https://github.com/Google-Pixel2-2XL/instalation_guide_wahoo/raw/main/taimen/repart/stockpartition-pixel2xl.zip)
+> f you want to back to the stock partition table, kindly download and flash the this [Stock Partiton - Pixel 2 XL](https://github.com/AR-Project-Studio/instalation_guide_wahoo/raw/main/taimen/repart/stockpartition-pixel2xl.zip)
 
 ## Credit:
    - PixelBoot
