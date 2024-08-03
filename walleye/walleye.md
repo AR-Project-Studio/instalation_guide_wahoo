@@ -51,21 +51,21 @@ fastboot devices
 ```
 6. Flash the TWRP Recovery on your device by typing:
 ```
-fastboot flash boot <recovery_filename>.img
+fastboot flash boot `recovery_filename.img`
 ```
 > [!Note]
-> Replace <recovery_filename> with the actual filename, or simply drag and drop the file into the terminal.
+> Replace `recovery_filename` with the actual filename, or simply drag and drop the file into the terminal.
 7. Now reboot into recovery
 8. Sideload the new partition file by typing:
 ```
-adb sideload <partition_filename>.zip
+adb sideload `partition_filename.zip`
 ```
 > [!Note]
-> Replace <partition_filename> with the actual filename or just drag & drop the file to the terminal
-9. In TWRP Recovery, select "Advanced," then "ADB Sideload," and swipe to begin the sideload process.
+> Replace `partition_filename` with the actual filename or just drag & drop the file to the terminal
+9. In TWRP Recovery, select `Advanced` then `ADB Sideload`, and swipe to begin the sideload process.
 > [!Important]
-> * After the flashing is complete, in TWRP, select "Return to the main menu."
-> * Select "Wipe," then select "Format Data/Factory Reset" and proceed with the formatting
+> * After the flashing is complete, in TWRP, select `Return to the main menu`
+> * Select `Wipe` then select `Format Data/Factory Reset` and proceed with the formatting
 
 ## Flashing
 
@@ -78,15 +78,15 @@ adb reboot bootloader
 ```
 fastboot -w
 ```
-3. Flash the AOSP Recovery (boot.img)
+3. Flash the AOSP Recovery `boot.img`
 4. Reboot into recovery
-5. In recovery, select "Apply Update"
+5. In recovery, select `Apply Update`
 5. Sideload the ROM by typing:
 ```
-adb sideload <ROM_filename>.zip
+adb sideload `ROM_filename.zip`
 ```
 > [!Note]
-> Replace <recovery_filename> with the actual filename, or simply drag and drop the file into the terminal.
+> Replace `recovery_filename` with the actual filename, or simply drag and drop the file into the terminal.
 6. Reboot system
 
 ### Dirty flash
@@ -94,13 +94,13 @@ adb sideload <ROM_filename>.zip
 ```
 adb reboot recovery
 ```
-2. In recovery select "Apply Update"
+2. In recovery select `Apply Update`
 2. Sideload the ROM by typing
 ```
-adb sideload <ROM_filename>.zip
+adb sideload `ROM_filename.zip`
 ```
 > [!Note]
-> Replace <ROM_filename> with the actual filename, or simply drag the file into the terminal.
+> Replace `ROM_filename` with the actual filename, or simply drag the file into the terminal.
 3. Reboot system
 
 > [!Important]
