@@ -51,14 +51,14 @@ fastboot devices
 ```
 6. Flash the TWRP Recovery on your device by typing:
 ```
-fastboot flash boot `recovery_filename.img`
+fastboot flash boot <recovery_filename.img>
 ```
 > [!Note]
 > Replace `recovery_filename` with the actual filename, or simply drag and drop the file into the terminal.
 7. Now reboot into recovery
 8. Sideload the new partition file by typing:
 ```
-adb sideload `partition_filename.zip`
+adb sideload <partition_filename.zip>
 ```
 > [!Note]
 > Replace `partition_filename` with the actual filename or just drag & drop the file to the terminal
@@ -78,12 +78,12 @@ adb reboot bootloader
 ```
 fastboot -w
 ```
-3. Flash the AOSP Recovery `boot.img`
+3. Flash the AOSP Recovery/`boot.img`
 4. Reboot into recovery
 5. In recovery, select `Apply Update`
 5. Sideload the ROM by typing:
 ```
-adb sideload `ROM_filename.zip`
+adb sideload <ROM_filename.zip>
 ```
 > [!Note]
 > Replace `recovery_filename` with the actual filename, or simply drag and drop the file into the terminal.
@@ -97,7 +97,7 @@ adb reboot recovery
 2. In recovery select `Apply Update`
 2. Sideload the ROM by typing
 ```
-adb sideload `ROM_filename.zip`
+adb sideload <ROM_filename.zip>
 ```
 > [!Note]
 > Replace `ROM_filename` with the actual filename, or simply drag the file into the terminal.
