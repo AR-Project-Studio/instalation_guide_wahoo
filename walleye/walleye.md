@@ -49,7 +49,7 @@ adb reboot bootloader
 ```
 fastboot devices
 ```
-6. Flash the TRWP Recovery on your device by typing:
+6. Flash the TWRP Recovery on your device by typing:
 ```
 fastboot flash boot <recovery_filename>.img
 ```
