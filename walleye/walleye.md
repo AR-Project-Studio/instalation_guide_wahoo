@@ -1,6 +1,7 @@
 ![Installation Guide For Android 14](https://github.com/Google-Pixel2-2XL/instalation_guide_wahoo/blob/main/AR-Project%20Banner.png)
 
 ## Installation Guide for Android 14 on Google Pixel 2 (Walleye)
+
 ### Basic requirements
 > [!Important]
 > * Read through the instructions at least once before actually following them, so as to avoid any problems due to any missed steps!
@@ -29,8 +30,9 @@ fastboot devices
 ```
 fastboot flashing unlock
 ```
-6. If the device doesn’t automatically reboot, reboot it. It should now be unlocked.
-7. Since the device resets completely, you will need to re-enable USB debugging to continue.
+> [!Note]
+> * If the device doesn’t automatically reboot, reboot it. It should now be unlocked.
+> * Since the device resets completely, you will need to re-enable USB debugging to continue.
 
 ### Repartition
 > [!Warning]
