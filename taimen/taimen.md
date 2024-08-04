@@ -39,7 +39,7 @@ fastboot flashing unlock
 > Specifically for the build provided by AR Project Studio, you must repartition your device again. If you have already repartitioned using the PixelExperience partition, you only need to flash the new repart file, there’s no need to revert to the stock partition. However, if you want a completely clean setup, you can revert to the stock partition first and then repartition again.
 
 1. Download [TWRP Recovery](https://github.com/arprojectstudio/instalation_guide_wahoo/raw/main/taimen/twrp/twrp-3.7.0_9-0-taimen.img)
-2. Download [Partition A14 Pixel 2XL](https://github.com/arprojectstudio/instalation_guide_wahoo/raw/main/taimen/repart/partition14-taimen.zip)
+2. Download [Partition A14 Pixel 2XL](https://github.com/arprojectstudio/repartition_device_google_wahoo/releases/download/v14/repartition-taimen-v14.zip)
 3. Connect your device to your PC via USB if it isn’t already.
 4. If your device isn’t already in fastboot mode, on the computer, open a command prompt (on Windows) or terminal (on Linux or macOS) window, and type:
 ```
@@ -104,7 +104,7 @@ adb sideload <ROM_filename.zip>
 3. Reboot system
 
 > [!Important]
-> f you want to back to the stock partition table, kindly download and flash the this [Stock Partiton - Pixel 2 XL](https://github.com/arprojectstudio/instalation_guide_wahoo/raw/main/taimen/repart/stockpartition-pixel2xl.zip)
+> f you want to back to the stock partition table, kindly download and flash the this [Stock Partiton - Pixel 2 XL](https://github.com/arprojectstudio/repartition_device_google_wahoo/releases/download/v14/stock-partition-taimen-v11.zip)
 
 ## Credit:
    - PixelBoot
